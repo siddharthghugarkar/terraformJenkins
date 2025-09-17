@@ -29,7 +29,7 @@ pipeline {
                 sh 'terraform show -no-color plan > tfplan.txt'
             }
         }
-        stage('Apply / Destroy') {
+          stage('Apply / Destroy') {
             steps {
                 script {
                     if (params.action == 'apply') {
